@@ -1,0 +1,642 @@
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	line-height: 1.6;
+	color: #333;
+}
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+hr {
+	/* Убираем стиль по-умолчанию */
+	border: 0;
+	/* Пишем свои */
+	display: block;
+	width: 100%;
+	height: 1px;
+	margin: 40px 0;
+	background-color: #e5e5e5;
+}
+
+/* ---------------------------------------------- */
+
+/* Header */
+.header {
+	width: 100%;
+	position: absolute;
+	/* верхний отступ либо margin-top .header__inner*/
+	padding-top: 30px;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	font-size: 30px;
+	font-weight: 700;
+	color: #fff;
+}
+
+/* Nav */
+.nav {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.nav__link {
+	/* чтобы было .nav__link:after относительно этому элементу*/
+	position: relative;
+	color: white;
+	text-decoration: none;
+	/* непонятно для чего */
+	display: inline-block;
+	vertical-align: top;
+	/* фишка - при обновлении страницы в white будет переходть тоже медленно */
+	transition: color .2s linear;
+	/* отступы слева и справа от ссылок */
+	margin: 0 10px;
+}
+
+.nav__link:hover:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: yellow;
+	position: absolute;
+	transition: color .2s linear;
+	top: 100%;
+	left: 0;
+	z-index: 1;
+}
+
+.nav__link:hover {
+	color: yellow;
+}
+
+.nav__link.active {
+	color: yellow;
+}
+
+
+/* Intro */
+/* выравниваем .intro-inner по центру */
+.intro .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.intro {
+	/*padding-top: 115px;*/
+	width: 100%;
+	height: 100vh;
+	background: url('../images/orel.png') no-repeat;
+	background-size: cover;
+}
+
+/* Container */
+.container {
+	width: 100%;
+	height: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	/*background-color: red;*/
+	/*opacity: 0.5;*/
+}
+
+.intro-inner {
+	width: 100%;
+	max-width: 880px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.intro__suptitle {
+	font-size: 72px;
+	color: white;
+	font-weight: normal;
+	text-align: center;
+	font-family: 'Kaushan Script', cursive;
+}
+
+.intro__title {
+	font-size: 150px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1;
+	color: white;
+}
+
+.intro__title:after {
+	content: '';
+	display: block;
+	width: 60px;
+	height: 3px;
+	background-color: #fff;
+	margin: 30px auto;
+	/*margin-top: 60px;*/
+}
+
+/* Button */
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	border: 2px solid #fff;
+	padding: 10px 35px;
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 30px;
+}
+
+.btn:hover {
+	background-color: #fff;
+	color: #333;
+	/* плавность */
+	transition: background-color .5s linear, color .5s linear;
+}
+
+/* Slider */
+.slider {
+	display: flex;
+	justify-content: space-between;
+}
+
+.slider__item {
+	position: relative;
+	width: 24%;
+	padding: 20px 0;
+	font-size: 18px;
+	color: white;
+	border-top: 3px solid white;
+	text-transform: uppercase;
+}
+
+.slider__item.active:before {
+	content: '';
+	display: block;
+	width: 70px;
+	height: 3px;
+	background-color: red;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	margin-top: -3px;
+}
+
+
+
+
+/* 2 БЛОК */
+
+/* Section */
+
+.section {
+	padding: 80px 0;
+}
+
+.section--devices {
+	background: url('../images/BackDevices.jpg') center no-repeat;
+	background-size: 	cover;
+	padding-bottom: 0;
+	margin-bottom: 40px;
+}
+
+.section--gray {
+	background-color: #f8f8f8;
+}
+
+.section__header {
+	/* Фишка  */
+	width: 100%;
+	max-width: 950px;
+	margin: 0 auto;
+	margin-bottom: 100px;
+	text-align: center;
+}
+
+.section__suptitle {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 24px;
+	color: #333;
+}
+
+.section__title {
+	font-size: 30px;
+}
+
+.section__title:after {
+	content: '';
+	display: block;
+	width: 60px;
+	height: 3px;
+	margin: 40px auto;
+	background-color: red;
+}
+
+.section__text {
+	color: #666;
+	font-size: 15px;
+}
+
+
+/* Card */
+
+.card {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* внутренний блок от Card */
+.card__item {
+	width: 30%;
+	max-width: 380px;
+}
+
+.card__inner {
+	position: relative;
+	background-color: #3b3b3b;
+}
+
+ /*при наводе на about__item сдвигаем саму картинку вверх и влево чуть-чуть*/
+/* используем трансформацию для лучшей производительности */
+.card__item:hover .card__img {
+	transform: translate3d(-10px, -10px, 0);
+}
+
+/* прозрачность картинки при наводе */
+.card__item:hover .card__img img {
+	opacity: 0.1;
+}
+
+.card__item:hover .card-text {
+	opacity: 1;
+}
+
+/* обертка картинки */
+.card__img {
+	background: linear-gradient(to bottom, #db7674, #e3cc7c);
+	transition: transform .1s linear;
+}
+
+/* картинка */
+.card__img img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	transition: opacity .3s linear;
+}
+
+/* показывающийся текст на картинке при наведении */
+.card-text {
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	z-index: 2;
+	/* Фишка - выровнять идеально по центру */
+	top: 50%;
+	transform: translate3d(0, -50%, 0);
+	width: 100%;
+	opacity: 0;
+}
+
+
+/* Statistic */
+
+.statistic {
+	background-color: #95e1d3;
+}
+
+.stat {
+	display: flex;
+	justify-content: space-between;
+}
+
+.stat__item {
+	flex: 1 1 0;
+	border-left: 1px solid #b5eae0;
+	text-align: center;
+	color: white;
+	padding: 70px 25px;
+}
+
+.stat__item:last-child {
+	border-right: 1px solid #b5eae0;
+}
+
+.stat__count {
+	font-weight: bold;
+	font-size: 72px;
+	/* ? */
+	line-height: 1;
+	margin-bottom: 10px;
+}
+
+.stat__text {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+
+/* Services */
+
+.services {
+	display: flex;
+}
+
+.services__item {
+	flex: 1 1 0;
+	padding-left: 65px;
+	padding-right: 35px;
+	position: relative;
+}
+
+.services__icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.services__title {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #333333;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.services__text {
+	font-size: 15px;
+	color: #999;
+}
+
+
+/* Devices */
+
+.devices {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.devices__item--ipad {
+	margin-left: 30px;
+}
+
+.devices__item--iphone {
+	z-index: 1;
+	position: absolute;
+	bottom: -50px;
+	right: 0px;
+}
+
+
+/* We do */
+
+.wedo {
+	display: flex;
+}
+
+.wedo__item {
+	width: 50%;
+}
+
+.accordion__item {
+	margin-bottom: 10px;
+	border: solid 1px #e5e5e5;
+	cursor: pointer;
+}
+
+/* У активного accordion__item */
+.accordion__item.active 
+.accordion__content {
+	display: block;
+}
+
+.accordion__item.active 
+.accordion__header {
+	border-bottom: solid 1px #e5e5e5;
+}
+
+.accordion__item.active 
+.accordion__header:after {
+	transform: rotate(-45deg);
+	margin-top: -5px;
+}
+
+.accordion__header {
+	padding: 15px 20px 15px 60px;
+	position: relative;
+	border-bottom: solid 1px transparent;
+}
+
+/* Стрелочка через border */
+.accordion__header:after {
+	content: '';
+	display: block;
+	width: 16px;
+	height: 16px;
+	border-top: 2px solid #cccccc;
+	border-right: 2px solid #cccccc;
+	position: absolute;
+
+	/* Выравниваем по центру по вертикале абсолютный элемент */
+	top: 50%;
+	transform: translateY(-50%);
+
+	margin-top: -10px;
+
+	right: 20px;
+	transform: rotate(135deg);
+}
+
+.accordion__icon {
+	position: absolute;
+
+	/* Выравниваем по центру по вертикале абсолютный элемент */
+	top: 50%
+	transform: translateY(-50%);
+
+	left: 20px;
+	z-index: 1;
+}
+
+.accordion__title {
+	text-transform: uppercase;
+	padding-left: 15px;
+}
+
+.accordion__content {
+	display: none;
+	font-size: 16px;
+	padding: 15px 20px;
+	color: #999;
+	font-style: italic;
+}
+
+
+
+/* Reviews */
+
+.reviews {
+	position: relative;
+	padding: 0 110px;
+}
+
+.reviews__item {
+	position: relative;
+	padding-left: 205px;
+}
+
+.reviews__photo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.reviews__text {
+	font-size: 18px;
+	color: #999;
+	font-style: italic;
+}
+
+.reviews__author {
+	font-size: 18px;
+	color: black;
+	font-style: italic;
+}
+
+.reviews__author:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 60px;
+	height: 3px;
+	margin-right: 10px;
+	background-color: red;
+}
+
+.reviews__btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+
+	/* Скрыть текст в кнопках */
+	font-size: 0;
+	color: transparent;
+}
+
+.reviews__btn:after {
+	content: '';
+	display: block;
+	width: 16px;
+	height: 16px;
+	border-top: 2px solid #cccccc;
+	border-left: 2px solid #cccccc;
+	margin-top: -10px;
+	right: 20px;
+}
+
+.reviews__btn--prev {
+	left: 0;
+	transform: rotate(-45deg);
+}
+
+.reviews__btn--next {
+	right: 0;
+	transform: rotate(135deg);
+}
+
+
+
+/* Meet our team */
+
+.social {
+	display: flex;
+	justify-content: center;
+}
+
+.social__item {
+	font-size: 30px;
+	border-right: solid 1px black;
+	color: #f38181;
+	background-color: #fce38a;
+	padding: 0 10px;
+}
+
+.social__item:hover {
+	color: white;
+	background-color: #f38181;
+}
+
+.social__item:last-child {
+	border-right: 0;
+}
+
+.social__item {
+	text-decoration: none;
+}
+
+.card__info {
+	margin-top: 15px;
+	text-align: center;
+}
+
+.card__name {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #333333;
+}
+
+.card__prof {
+	color: #999999;
+	font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* transiton применяем для самого элемента, и прописываем у какого его свойства будет переход */
+
+/* Используемые шрифты */
+
+/* 
+
+font-family: 'Kaushan Script', cursive;
+font-family: 'Montserrat', sans-serif; 
+
+*/

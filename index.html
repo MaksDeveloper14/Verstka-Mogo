@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<title>MoGo</title>
+	<script src="https://use.fontawesome.com/6935e6c823.js"></script>
+</head>
+<body>
+
+
+		<!-- 1. Шапка сайта (навигация) - вне блока вступления - абсолютно спозиционированное -->
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__logo">MoGo</div>
+					<nav class="nav">
+						<a href="#" class="nav__link active">About</a>
+						<a href="#" class="nav__link">Service</a>
+						<a href="#" class="nav__link">Work</a>
+						<a href="#" class="nav__link">Blog</a>
+						<a href="#" class="nav__link">Contact</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+
+		<!-- 2.Вступление -->
+		<div class="intro">
+			<!-- container ограничивает ширину контента -->
+			<div class="container">
+				<!-- ограничиваем по ширине внешним блоком -->
+				<div class="intro-inner">
+					<h2 class="intro__suptitle">Creative Template</h2>
+					<h1 class="intro__title">Welcome to MoGo</h1>
+					<a href="#" class="btn">Learn More</a>
+				</div>
+				<div class="slider">
+					<div class="slider__item active">
+						<b>01</b>
+						Intro
+					</div>
+					<div class="slider__item">
+						<b>02</b>
+						Work
+					</div>
+					<div class="slider__item">
+						<b>03</b>
+						About
+					</div>
+					<div class="slider__item">
+						<b>04</b>
+						Contacts
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- 3. Раздел сайта -->
+		<section class="section">
+			<div class="container">
+				<!-- повторяющийся блок в разным местах сайта -->
+				<div class="section__header">
+					<h3 class="section__suptitle">What we do</h3>
+					<h2 class="section__title">Story about us</h2>
+					<div class="section__text">
+						<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Voluptatum sed tempore vel expedita impedit error nihil dolore, eos ipsam nisi rem, temporibus. Ipsa iusto ab, optio sequi eligendi non nisi.</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__item">
+						<div class="card__inner">
+							<div class="card__img">
+								<img src="assets/images/about/1.jpg" alt="Компьютер">
+							</div>
+							<div class="card-text">super team</div>
+						</div>
+					</div>
+					<div class="card__item">
+						<div class="card__inner">
+							<div class="card__img">
+								<img src="assets/images/about/2.jpg" alt="Компьютер">
+							</div>
+							<div class="card-text">super team</div>
+						</div>
+					</div>
+					<div class="card__item">
+						<div class="card__inner">
+							<div class="card__img">
+								<img src="assets/images/about/3.jpg" alt="Компьютер">
+							</div>
+							<div class="card-text">super team</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 4. Блок. Секция здесь не подойдет, так как нету заголовка в нашем разделе и это будет не семантично. Валидатор будет ругаться, что у нас есть раздел, а в ней нету заголовка -->
+		<div class="statistic">
+			<div class="container">
+				<div class="stat">
+					<div class="stat__item">
+						<div class="stat__count">42</div>
+						<div class="stat__text">Web Design Projects</div>
+					</div>
+					<div class="stat__item">
+						<div class="stat__count">123</div>
+						<div class="stat__text">Happy client</div>
+					</div>
+					<div class="stat__item">
+						<div class="stat__count">15</div>
+						<div class="stat__text">Award winner</div>
+					</div>
+					<div class="stat__item">
+						<div class="stat__count">99</div>
+						<div class="stat__text">Cup of coffee</div>
+					</div>
+					<div class="stat__item">
+						<div class="stat__count">24</div>
+						<div class="stat__text">Members</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Services -->
+
+		<section class="section">
+			<div class="container">
+				<div class="section__header">
+					<h3 class="section__suptitle">We work with</h3>
+					<h2 class="section__title">Amazing Services</h2>
+				</div>
+				<div class="services">
+					<div class="services__item">
+						<img class="services__icon" src="assets/images/icons/icon1.png" alt="">
+						<div class="services__title">Photography</div>
+						<div class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+					</div>
+					<div class="services__item">
+						<img class="services__icon" src="assets/images/icons/icon2.png" alt="">
+						<div class="services__title">Photography</div>
+						<div class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+					</div>
+					<div class="services__item">
+						<img class="services__icon" src="assets/images/icons/icon3.png" alt="">
+						<div class="services__title">Photography</div>
+						<div class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+					</div>
+				</div>
+
+				<hr>
+				<!-- можно и border-bottom -->
+
+				<div class="services">
+					<div class="services__item">
+						<img class="services__icon" src="assets/images/icons/icon4.png" alt="">
+						<div class="services__title">Seo</div>
+						<div class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+					</div>
+					<div class="services__item">
+						<img class="services__icon" src="assets/images/icons/icon5.png" alt="">
+						<div class="services__title">Css/Html</div>
+						<div class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+					</div>
+					<div class="services__item">
+						<img class="services__icon" src="assets/images/icons/icon6.png" alt="">
+						<div class="services__title">Digital</div>
+						<div class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Devices -->
+
+		<section class="section section--devices">
+			<div class="container">
+				<div class="section__header">
+					<h3 class="section__suptitle">For all devices</h3>
+					<h2 class="section__title">Unique design</h2>
+				</div>
+				<div class="devices">
+					<img class="devices__item devices__item--ipad" src="assets/images/ipad.png" alt="Ipad">
+					<img class="devices__item devices__item--iphone" src="assets/images/iphone.png" alt="Iphone">
+				</div>
+			</div>
+		</section>
+
+
+		<!-- We do -->
+
+		<section class="section">
+			<div class="container">
+				<div class="section__header">
+					<h3 class="section__suptitle">Service</h3>
+					<h2 class="section__title">What we do</h2>
+					<div class="section__text">
+						<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Voluptatum sed tempore vel expedita impedit error nihil dolore, eos ipsam nisi rem, temporibus. Ipsa iusto ab, optio sequi eligendi non nisi.</p>
+					</div>
+				</div>
+				<div class="wedo">
+					<div class="wedo__item">
+						<img src="assets/images/wedo-image.jpg" alt="">
+					</div>
+					<div class="wedo__item">
+						<div class="accordion">
+
+<!-- 							<div class="accordion__item">
+								<div class="accordion__header">
+									<img class="accordion__icon" src="assets/images/icons/icon7.png" alt="">
+									<div class="accordion__title">Photography</div>
+								</div>	
+								<div class="accordion__content">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</div>	
+							</div> -->
+
+							<div class="accordion__item active">
+								<div class="accordion__header">
+									<img class="accordion__icon" src="assets/images/icons/icon7.png" alt="">
+									<div class="accordion__title">Photography</div>
+								</div>	
+								<div class="accordion__content">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</div>	
+							</div>
+
+							<div class="accordion__item">
+								<div class="accordion__header">
+									<img class="accordion__icon" src="assets/images/icons/icon8.png" alt="">
+									<div class="accordion__title">Creativity</div>
+								</div>	
+								<div class="accordion__content">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</div>	
+							</div>
+
+							<div class="accordion__item">
+								<div class="accordion__header">
+									<img class="accordion__icon" src="assets/images/icons/icon9.png" alt="">
+									<div class="accordion__title">Web Design</div>
+								</div>	
+								<div class="accordion__content">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								</div>	
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		 <!-- Reviews -->
+
+		<!-- Так как у раздела нету заголовка, то используем лучше div -->
+		<div class="section section--gray"> <!-- Секция с модификатором -->
+			<div class="container">
+				<div class="reviews">
+					<a class="reviews__btn reviews__btn--prev" href="#">Prev</a>
+					<a class="reviews__btn reviews__btn--next" href="#">Next</a>
+					<div class="reviews__item">
+						<img class="reviews__photo" src="assets/images/icons/icon10.png" alt="">
+						<div class="reviews__text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dolores odio asperiores atque. Dolore modi nulla quo suscipit consequatur expedita fuga libero, similique unde laborum odio asperiores atque libero, similique unde laborum odio asperiores atque.
+						</div>
+						<div class="reviews__author">Jon Doe</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Meet our team -->
+
+		<section class="section">
+			<div class="container">
+				<div class="section__header">
+					<h3 class="section__suptitle">Who we are</h3>
+					<h2 class="section__title">Meet our team</h2>
+					<div class="section__text">
+						<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Voluptatum sed tempore vel expedita impedit error nihil dolore, eos ipsam nisi rem, temporibus. Ipsa iusto ab, optio sequi eligendi non nisi.</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__item">
+						<div class="card__inner">
+							<div class="card__img">
+								<img src="assets/images/People2.jpg" alt="Компьютер">
+							</div>
+							<div class="card-text">
+								<div class="social">
+									<a class="social__item" href="#" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+									<a class="social__item" href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+									<a class="social__item" href="#" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+									<a class="social__item" href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="card__info">
+							<div class="card__name">Matthew Dix</div>
+							<div class="card__prof">Graphic Design</div>
+						</div>
+					</div>
+					<div class="card__item">
+						<div class="card__inner">
+							<div class="card__img">
+								<img src="assets/images/People3.jpg" alt="Компьютер">
+							</div>
+							<div class="card-text">
+								<div class="social">
+									<a class="social__item" href="#" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+									<a class="social__item" href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+									<a class="social__item" href="#" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+									<a class="social__item" href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="card__info">
+							<div class="card__name">Christopher Campbell</div>
+							<div class="card__prof">Branding/UX design</div>
+						</div>
+					</div>
+					<div class="card__item">
+						<div class="card__inner">
+							<div class="card__img">
+								<img src="assets/images/People1.jpg" alt="Компьютер">
+							</div>
+							<div class="card-text">
+								<div class="social">
+									<a class="social__item" href="#" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+									<a class="social__item" href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+									<a class="social__item" href="#" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+									<a class="social__item" href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="card__info">
+							<div class="card__name">Michael Fertig </div>
+							<div class="card__prof">Developer</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	<!-- END -->
+
+	<!-- ~~~~~ Тестовая картинка с сервиса ~~~~~ -->
+
+	<!-- http://placehold.it/570x380 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- P.S. -->
+
+
+	<!-- 
+
+		1. Смотрим на макет
+		2. Подключаем все нужные шрифты с Google Fonts
+		3. Прописываем по-умолчанию в селекторах значения для body и всех элементов
+		4. Для некоторых свойств нужны префиксы.
+		5. Сборщки сами расставляют префиксы
+
+
+	 -->
+
+</body>
+</html>
